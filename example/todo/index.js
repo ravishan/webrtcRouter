@@ -26,7 +26,6 @@ var agent = rtcAgent(navigator,WebSocket,RTCPeerConnection,RTCSessionDescription
 var rtc = rtcEmitter(agent,messageHandler(store.getState,({peerId,items}) => {
  		store.dispatch(addPeerTodo(({peerId,items}))) }));
 
-window.rtc = rtc;
 global.rtc = rtc;
 
 
